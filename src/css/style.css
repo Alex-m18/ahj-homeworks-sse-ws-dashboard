@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.2;
+  font-family: 'Roboto', sans-serif;
+  color: #101010;
+  text-align: left;
+  background-color: snow;
+  margin-left: 1.25em;
+  margin-top: 1.25em;
+}
+
+.cloud_dashboard {
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 58em;
+  height: 30em;
+}
+
+.cp_widget,
+.worklog_widget {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 27.125em;
+  height: 27.125em;
+  border: 1px solid green;
+  margin: auto;
+  border-radius: 1em;
+}
+
+.cp_widget .title,
+.worklog_widget .title {
+  width: 95%;
+  font-weight: 700;
+  padding: .5em;
+  margin-left: 1.5em;
+  margin-bottom: .125em;
+  text-align: left;
+}
+
+.instances_area,
+.worklog_widget .log_area {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 24em;
+  height: auto;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+
+.instances_area {
+  max-height: 21.5em;
+}
+
+.worklog_widget .log_area {
+  max-height: 23em;
+}
+
+.worklog_widget .message {
+  width: 100%;
+  padding-bottom: 0.5em;
+}
+
+.instance {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 95%;
+  height: auto;
+  margin-left: 0;
+  margin-bottom: .75em;
+  padding: .25em .5em;
+  border: 1px solid grey;
+  border-radius: .75em;
+font-size: .875em;
+}
+
+.instance_id {
+  text-align: left;
+  padding: .125em 0;
+}
+
+.instance_status,
+.instance_actions {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: .125em 0;
+  order: 1px solid grey;
+}
+
+.status_img,
+.start_btn,
+.stop_btn,
+.remove_btn {
+  width: 1.5em;
+  height: 1.5em;
+  padding: 0 .25em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.start_btn:hover,
+.stop_btn:hover,
+.remove_btn:hover {
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.24), 0 8px 25px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.start_btn:active,
+.stop_btn:active,
+.remove_btn:active {
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.24), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.start_btn,
+.stop_btn {
+  display: none;
+}
+
+.start_btn.show,
+.stop_btn.show {
+  display: block;
+}
+
+.status_img.green {
+  background-image: url("../img/circle_green.svg");
+}
+
+.status_img.red {
+  background-image: url("../img/circle_red.svg");
+}
+
+.status_name {
+  padding-left: .25em;
+}
+
+.start_btn {
+  background-image: url("../img/play.svg");
+}
+
+.stop_btn {
+  background-image: url("../img/pause.svg");
+}
+
+.remove_btn {
+  background-image: url("../img/cross.svg");
+}
+
+.create_btn {
+  cursor: pointer;
+  color: cornflowerblue;
+  text-align: center;
+  width: 100%;
+}
